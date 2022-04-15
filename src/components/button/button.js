@@ -1,5 +1,5 @@
-export const Button = ({toggleVisibility}) => {
+export const Button = ({toggleVisibility, isVisible}) => {
     return(
-        <button type="button" onClick={toggleVisibility}>Shom films</button>
+        <button type="button" onClick={toggleVisibility} >{ isVisible ? 'Hide films' : 'Show films'}</button>
     )
 }
