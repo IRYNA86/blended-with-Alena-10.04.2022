@@ -15,9 +15,9 @@ export default class App extends Component {
     this.setState(prevState => ({ isVisible: !prevState.isVisible }))
   }
 
-  deleteFilm = (delId) => {
-    this.setState(prevState => ({ films: prevState.films.filter(({ id }) => id !== delId) }))
-  }
+  // deleteFilm = (delId) => {
+  //   this.setState(prevState => ({ films: prevState.films.filter(({ id }) => id !== delId) }))
+  // }
   toggleWatchedFilms = (currentId) => {
     this.setState(prevState => ({
       films: prevState.films.map(film => {
@@ -37,7 +37,10 @@ export default class App extends Component {
       <h1>Filmoteka</h1>
         <Button toggleVisibility={this.toggleVisibility} isVisible={isVisible} />
         {
-          isVisible && <FilmList films = {films} onDeleteFilm={this.deleteFilm} onWatchedFilm={this.toggleWatchedFilms}
+          isVisible && <FilmList films = {films} 
+          
+          // onDeleteFilm={this.deleteFilm} 
+          onWatchedFilm={this.toggleWatchedFilms}
         />
         }
         
